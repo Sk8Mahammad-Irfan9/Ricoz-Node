@@ -30,7 +30,6 @@ exports.getAllItems = async (req, res) => {
     const items = await itemModel.find();
     res.status(200).send({
       success: true,
-      count: items.length,
       message: "All items",
       items,
     });
